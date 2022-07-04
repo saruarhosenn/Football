@@ -1,0 +1,507 @@
+/* 
+=========================================
+Variables
+=========================================
+*/
+:root {
+  /*_______ Font Family _______*/
+  --primary-font-700: "Poppins-700";
+  --primary-font-500: "Poppins-500";
+  --primary-font-400: "Poppins-400";
+  /*________ Font Size ________*/
+  --size-xxl: 64px;
+  --size-xl: 48px;
+  --size-lg: 35px;
+  --size-md: 28px;
+  --size-sm: 16px;
+  /*________ Text Color ________*/
+  --primary-color: #18191f;
+  --secondary-color: #ffffff;
+  --third-color: #e02c6d;
+  /*_________ BG Color _________*/
+  --primary-bg: #e02c6d;
+  --secondary-bg: #ffffff;
+  --third-bg: #2d25a0;
+}
+/* 
+  =========================================
+  Variables
+  =========================================
+  */
+
+/*
+===========================================
+Basic Setup
+===========================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--secondary-bg);
+  font-family: var(--primary-font-400);
+  font-size: var(--size-sm);
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+span,
+label {
+  display: inline-block;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+button,
+input,
+textarea {
+  outline: 0;
+  border: 0;
+}
+
+button,
+input,
+textarea {
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+button,
+img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 
+===================================
+Font Family
+===================================
+*/
+.primary-font-700 {
+  font-family: var(--primary-font-700);
+}
+
+.primary-font-500 {
+  font-family: var(--primary-font-500);
+}
+
+.primary-font-400 {
+  font-family: var(--primary-font-400);
+}
+
+/* 
+  ===================================
+  Font Size
+  ===================================
+  */
+.size-xxl {
+  font-size: var(--size-xxl);
+  line-height: 1.4;
+}
+
+.size-xl {
+  font-size: var(--size-xl);
+  line-height: 1.3;
+}
+
+.size-lg {
+  font-size: var(--size-lg);
+  line-height: 1.3;
+}
+
+.size-md {
+  font-size: var(--size-md);
+  line-height: 1.3;
+}
+
+.size-sm {
+  font-size: var(--size-sm);
+}
+
+/* 
+  ===================================
+  Text Color
+  ===================================
+  */
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+/* 
+  ===================================
+  BG Color
+  ===================================
+  */
+.primary-bg {
+  background-color: var(--primary-bg);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-bg);
+}
+
+.third-bg {
+  background-color: var(--third-bg);
+}
+
+/*
+===========================================
+Start Reuseble Components
+===========================================
+*/
+section,
+footer {
+  padding: 70px 0;
+}
+
+.container-lg,
+.container-md {
+  margin: auto;
+}
+
+.container-lg {
+  max-width: 1160px;
+}
+
+.container-md {
+  max-width: 1052px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sub-title {
+  margin: 10px 0;
+}
+
+.btn {
+  font-family: var(--primary-font-500);
+  font-size: var(--size-sm);
+  color: var(--secondary-color);
+  padding: 10px 35px;
+  background-color: var(--primary-bg);
+}
+
+.btn span:first-child {
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: var(--secondary-bg);
+  color: var(--third-color);
+}
+
+.blue-color:hover {
+  background-color: var(--third-bg);
+  color: var(--secondary-color);
+}
+/*
+===========================================
+End Reuseble Components
+===========================================
+*/
+
+/*
+==============================================
+Start Header Section
+==============================================
+*/
+.bg-header {
+  padding: 40px 0;
+  position: relative;
+  z-index: 999;
+}
+
+.bg-header .navBar {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu .menu .menu-item {
+  display: inline-block;
+}
+
+.menu .menu-item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.menu .menu-item .menu-link {
+  color: var(--secondary-color);
+}
+
+.menu .menu-item .menu-link:hover {
+  color: var(--third-color);
+}
+
+.navBar #check-btn {
+  display: none;
+}
+
+.navBar .nav-icon {
+  cursor: pointer;
+  display: none;
+  position: relative;
+  z-index: 999;
+}
+
+.nav-icon .line {
+  width: 35px;
+  height: 3px;
+  margin: 7px 0;
+  background-color: var(--secondary-bg);
+}
+/*
+==============================================
+End Header Section
+==============================================
+*/
+
+/*
+==============================================
+Start Banner Section
+==============================================
+*/
+.banner-section {
+  margin-top: -3px;
+  background-color: var(--third-bg);
+  padding: 70px 0 100px;
+}
+
+.banner-grid {
+  grid-column-gap: 90px;
+  align-items: center;
+}
+
+.banner-text .banner-title {
+  margin-bottom: 20px;
+}
+/*
+==============================================
+End Banner Section
+==============================================
+*/
+
+/*
+==============================================
+Start Player Section
+==============================================
+*/
+.player-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.player {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.player .player-img {
+  overflow: hidden;
+}
+
+.player .player-img img {
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+.player:hover .player-img img {
+  transform: scale(1.1);
+}
+
+.player .player-desc a {
+  margin-top: 15px;
+}
+
+/*
+==============================================
+End Player Section
+==============================================
+*/
+
+/*
+================================================
+Start Highlights Section
+================================================
+*/
+.highlights-grid {
+  align-items: center;
+  grid-column-gap: 100px;
+}
+
+.highlights-title p {
+  margin-bottom: 35px;
+}
+
+.match-img-1 {
+  display: none;
+}
+
+/*
+================================================
+End Highlights Section
+================================================
+*/
+
+/*
+==============================================
+Start Video Section
+==============================================
+*/
+.video-section-title .video-title {
+  margin-bottom: 30px;
+}
+
+.video-grid {
+  grid-gap: 30px;
+}
+
+.video {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+/*
+==============================================
+End Video Section
+==============================================
+*/
+
+/*
+==============================================
+Start Newsletter Section
+==============================================
+*/
+.newsletter-section-title .newsletter-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.newsletter form {
+  margin: auto;
+  max-width: 550px;
+}
+
+.newsletter-fild {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newsletter-fild input,
+.newsletter-fild input::placeholder {
+  font-family: var(--primary-font-400);
+  font-size: var(--size-sm);
+  color: var(--primary-color);
+}
+
+.newsletter-fild input {
+  width: 70%;
+  padding: 15px 15px;
+}
+
+.newsletter-fild button {
+  width: 30%;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.newsletter-fild input,
+.newsletter-fild button {
+  -webkit-box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+/*
+==============================================
+End Newsletter Section
+==============================================
+*/
+
+/*
+==============================================
+Start Footer Section
+==============================================
+*/
+.footer-logo,
+.social-link ul,
+.copyright-text {
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 400px;
+}
+
+.social-link {
+  margin: 15px 0 24px;
+}
+
+.social-link ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.social-link ul li a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e7e7e8;
+  color: #969bab;
+  text-align: center;
+}
+
+.social-link ul li a:hover {
+  background-color: #969bab;
+  color: #e7e7e8;
+}
+
+/*
+==============================================
+End Footer Section
+==============================================
+*/
